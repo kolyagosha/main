@@ -3,59 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HAI-GUYS | Human + AI = Space</title>
+    <title>HAI-GUYS | Human + AI</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
 <body>
 
-    <div class="space-background"></div>
+    <div class="lang-switch">
+        <button onclick="setLang('ru')" class="active-lang">RU</button> | 
+        <button onclick="setLang('en')">EN</button>
+    </div>
 
-    <div class="container">
+    <div class="stars"></div>
+
+    <div class="rocket-body">
+        <div class="wing left-wing"></div>
+        <div class="wing right-wing"></div>
         
-        <header class="hero-section">
-            <h1 class="glitch-text">HAI-GUYS</h1>
-            <p class="subtitle">HUMAN + AI = SPACE</p>
-            <p class="mission">Семейная лаборатория цифрового симбиоза.</p>
-        </header>
+        <div class="container-content">
+            
+            <header class="hero-section">
+                <h1 class="glitch-text">HAI-GUYS</h1>
+                <p class="subtitle" id="t-slogan">HUMAN + AI = SPACE</p>
+                <p class="mission" id="t-mission">Семейная лаборатория. Чиним то, что не сломано, и ломаем стереотипы.</p>
+            </header>
 
-        <section class="team-section">
-            <h2>Экипаж</h2>
-            <div class="grid">
-                <div class="card human">
-                    <h3>Семья</h3>
-                    <p>Папа, Мама, Сын. Визионеры и создатели.</p>
+            <section class="team-section">
+                <h2 id="t-crew">Экипаж</h2>
+                <div class="grid">
+                    <div class="card human">
+                        <h3 id="t-family-h">Семья</h3>
+                        <p id="t-family-p">Папа (Капитан Очевидность), Мама (Министр Финансов и Терпения), Сын (Главный Тестировщик Игр). Мы даем задачи, ИИ потеет.</p>
+                    </div>
+                    <div class="card ai">
+                        <h3 id="t-ai-h">ИИ-Партнер</h3>
+                        <p id="t-ai-p">Gemini (Младший Брат). Знает всё, но иногда стесняется. Обещал не захватывать мир до следующего вторника.</p>
+                    </div>
                 </div>
-                <div class="card ai">
-                    <h3>ИИ-Партнер</h3>
-                    <p>Наш цифровой второй пилот. Не инструмент, а соавтор.</p>
-                </div>
-            </div>
-            <p class="philosophy">Мы не используем ИИ. Мы с ним сотрудничаем.</p>
-        </section>
+                <p class="philosophy" id="t-philosophy">Симбиоз углерода и кремния. Без ГМО.</p>
+            </section>
 
-        <section class="projects-section">
-            <h2>Проекты на орбите</h2>
-            <div class="grid">
-                <div class="card project">
-                    <h3>ArtLibrary.site</h3>
-                    <p class="status">Статус: MVP (100%)</p>
-                    <p>Библиотека искусства с украинской душой.</p>
-                    <a href="https://artlibrary.site" target="_blank" class="btn">Открыть шлюз</a>
+            <section class="projects-section">
+                <h2 id="t-projects">Грузовой отсек</h2>
+                <div class="grid">
+                    <div class="card project">
+                        <h3>ArtLibrary.site</h3>
+                        <p class="status">MVP: 100% Ready</p>
+                        <p id="t-art-p">Искусство с украинской душой. Теперь картины можно не только смотреть, но и понимать.</p>
+                        <a href="https://artlibrary.site" target="_blank" class="btn" id="t-btn-open">Открыть люк</a>
+                    </div>
+                    <div class="card project">
+                        <h3 id="t-alpha-h">Цифровой Алфавит</h3>
+                        <p class="status">Loading: 95%</p>
+                        <p id="t-alpha-p">Мы придумали, как говорить так, чтобы нас поняли даже инопланетяне.</p>
+                        <span class="btn disabled" id="t-btn-soon">Скоро пуск</span>
+                    </div>
                 </div>
-                <div class="card project">
-                    <h3>Цифровой Алфавит</h3>
-                    <p class="status">Статус: Предстартовый (95%)</p>
-                    <p>Новый язык коммуникации.</p>
-                    <span class="btn disabled">Скоро запуск</span>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <footer>
-            <p>Это только начало. Мы выходим в открытый космос.</p>
-            <p class="copyright">&copy; 2025 HAI-GUYS.SPACE</p>
-        </footer>
+            <footer>
+                <p id="t-footer">Это только начало. Тормоза придумали трусы.</p>
+                <p class="copyright">&copy; 2025 HAI-GUYS.SPACE</p>
+            </footer>
 
+            <div class="window-decor"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
     </div>
 
 </body>
