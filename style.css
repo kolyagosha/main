@@ -1,179 +1,172 @@
 /* База */
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    background-color: #0b0d17; /* Глубокий космос */
+    background-color: #050510;
     color: #e0e6ed;
-    font-family: 'Verdana', sans-serif; /* Чуть читабельнее */
+    font-family: 'Courier New', Courier, monospace; /* Шрифт терминала */
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 20px;
+    align-items: center; /* Центрируем по вертикали тоже */
+    padding: 20px;
 }
 
-/* Переключатель языка (в углу) */
+/* Переключатель языка */
 .lang-switch {
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 100;
-    color: #fff;
 }
 .lang-switch button {
-    background: none;
-    border: none;
-    color: #555;
+    background: #000;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1rem;
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-family: inherit;
 }
 .lang-switch button.active-lang {
-    color: #00d4ff;
-    text-decoration: underline;
+    background: #00d4ff;
+    color: #000;
 }
 
-/* РАКЕТА (Контейнер) */
+/* АНИМАЦИЯ ЗВЕЗД */
+@keyframes spaceFlight {
+    from { background-position: 0 0, 0 0, 0 0; }
+    to { background-position: 0 1000px, 0 500px, 0 250px; } /* Движение вниз */
+}
+
+.stars {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Три слоя звезд разного размера */
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
+        radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 1px);
+    background-size: 500px 500px, 300px 300px, 200px 200px;
+    z-index: -10;
+    animation: spaceFlight 60s linear infinite; /* Звезды летят! */
+}
+
+/* НОВЫЙ КОНТЕЙНЕР (Бортовой компьютер) */
 .rocket-body {
     position: relative;
     width: 100%;
-    max-width: 700px;
-    background: linear-gradient(180deg, #161b33 0%, #0f1221 100%);
-    border: 2px solid #334;
-    padding: 60px 20px 100px; /* Большой отступ снизу для "огня" */
+    max-width: 800px;
+    background: rgba(16, 20, 30, 0.9); /* Темный полупрозрачный фон */
+    border: 2px solid #00d4ff; /* Неоновая рамка */
+    /* Срезанные углы (Clip-path) - очень технологично */
+    clip-path: polygon(
+        20px 0, 100% 0, 
+        100% calc(100% - 20px), calc(100% - 20px) 100%, 
+        0 100%, 0 20px
+    );
+    padding: 40px;
     text-align: center;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-    margin-bottom: 50px;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
 }
 
-/* Магия формы ракеты (только для компов) */
-@media (min-width: 768px) {
-    .rocket-body {
-        border-radius: 400px 400px 20px 20px; /* Нос ракеты */
-        margin-top: 40px;
-        border-bottom: none;
-    }
-    
-    /* Крылья */
-    .wing {
-        position: absolute;
-        bottom: 50px;
-        width: 100px;
-        height: 200px;
-        background: #161b33;
-        border: 2px solid #334;
-        z-index: -1;
-    }
-    .left-wing {
-        left: -80px;
-        border-radius: 100% 0 0 20%;
-        transform: skewY(20deg);
-        border-right: none;
-    }
-    .right-wing {
-        right: -80px;
-        border-radius: 0 100% 20% 0;
-        transform: skewY(-20deg);
-        border-left: none;
-    }
+/* Декор углов рамки (через псевдоэлементы, если клип-пат сложен, сделаем проще рамкой) */
+.rocket-body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    opacity: 0.5;
 }
 
-/* Контент внутри */
+/* Типографика */
 .hero-section h1 {
-    font-size: 2.5rem;
-    color: #00d4ff;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 0px #00d4ff;
+    letter-spacing: 5px;
     margin-bottom: 10px;
 }
 
 .mission {
-    font-style: italic;
-    color: #aaa;
-    margin-top: 15px;
-    padding: 0 10px;
+    border-top: 1px dashed #333;
+    border-bottom: 1px dashed #333;
+    padding: 15px;
+    margin-top: 20px;
+    color: #00d4ff;
 }
 
 h2 {
     color: #bd00ff;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin: 50px 0 30px;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* Сетка */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+@media(min-width: 600px) {
+    .grid { grid-template-columns: 1fr 1fr; }
 }
 
 /* Карточки */
-.grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
 .card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid #334;
+    border: 1px solid #333;
+    background: rgba(0,0,0,0.5);
     padding: 20px;
-    border-radius: 15px;
-    width: 90%;
     transition: 0.3s;
 }
-
 .card:hover {
-    border-color: #00d4ff;
-    background: rgba(0, 212, 255, 0.05);
+    border-color: #bd00ff;
+    box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);
 }
 
-.card.human h3 { color: #ffae00; } /* Люди - теплый цвет */
-.card.ai h3 { color: #00d4ff; }    /* ИИ - холодный цвет */
+.card h3 { margin-bottom: 10px; color: #fff; }
 
 /* Кнопки */
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 25px;
+    margin-top: 15px;
+    padding: 10px 30px;
+    background: transparent;
     border: 1px solid #00d4ff;
     color: #00d4ff;
     text-decoration: none;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
     font-weight: bold;
-    transition: 0.3s;
+    text-transform: uppercase;
+    transition: 0.2s;
 }
-
 .btn:hover {
     background: #00d4ff;
     color: #000;
     box-shadow: 0 0 20px #00d4ff;
 }
-
 .btn.disabled {
     border-color: #555;
     color: #555;
-    pointer-events: none;
+    cursor: default;
+}
+.btn.disabled:hover {
+    background: transparent;
+    box-shadow: none;
+    color: #555;
 }
 
-/* Иллюминатор внизу */
+/* Футер */
+footer {
+    margin-top: 50px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Иллюминатор убираем или делаем просто кружком загрузки */
 .window-decor {
-    width: 80px;
-    height: 80px;
-    background: #111;
-    border: 5px solid #334;
-    border-radius: 50%;
-    margin: 40px auto 0;
-    box-shadow: inset 0 0 20px #000;
-}
-
-/* Звезды на фоне (простой CSS паттерн) */
-.stars {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: 
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
-        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
-    background-size: 550px 550px, 350px 350px, 250px 250px;
-    z-index: -10;
+    display: none; /* Убрали, чтобы не рисковать с ассоциациями */
 }
