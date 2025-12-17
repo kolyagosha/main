@@ -3,34 +3,44 @@ const translations = {
         slogan: "HUMAN + AI = SPACE",
         mission: "Семейная лаборатория. Чиним то, что не сломано, и ломаем стереотипы.",
         crew: "Экипаж",
-        family_h: "Семья",
-        family_p: "Папа (Капитан Очевидность), Мама (Министр Финансов), Сын (Главный по кнопкам). Мы даем задачи, ИИ потеет.",
-        ai_h: "ИИ-Партнер",
-        ai_p: "Gemini (Младший Брат). Знает всё, но иногда стесняется. Обещал не захватывать мир до следующего вторника.",
-        philosophy: "Симбиоз углерода и кремния. Без ГМО.",
+        
+        // Тут про Семью
+        family_h: "Семья (Композиторы)",
+        family_p: "Папа, Мама, Сын. Мы пишем музыку идей. Иногда спорим до хрипоты, но всегда в одной тональности.",
+        
+        // Тут про ИИ (Оркестр)
+        ai_h: "Цифровой Оркестр",
+        ai_p: "Gemini — наш Дирижер (управляет хаосом). В оркестре: Claude (первая скрипка кода) и ElevenLabs (золотой голос). Играем без фальши.",
+        
+        philosophy: "Симбиоз углерода и кремния. Высокое искусство технологий.",
         projects: "Грузовой отсек",
         art_p: "Искусство с украинской душой. Теперь картины можно не только смотреть, но и понимать.",
         btn_open: "Открыть люк",
         alpha_h: "Цифровой Алфавит",
         alpha_p: "Мы придумали, как говорить так, чтобы нас поняли даже инопланетяне.",
-        btn_soon: "Скоро пуск",
+        btn_soon: "Скоро премьера",
         footer: "Это только начало. Тормоза придумали трусы."
     },
     en: {
         slogan: "HUMAN + AI = SPACE",
         mission: "Family Lab. Fixing what ain't broken and breaking stereotypes.",
         crew: "The Crew",
-        family_h: "The Family",
-        family_p: "Dad (Captain Obvious), Mom (CFO & Patience Keeper), Son (Chief Button Presser). We give tasks, AI sweats.",
-        ai_h: "AI-Partner",
-        ai_p: "Gemini (Little Bro). Knows everything, acts shy. Promised not to conquer the world until next Tuesday.",
-        philosophy: "Carbon & Silicon symbiosis. GMO-free.",
+        
+        // Family
+        family_h: "The Family (Composers)",
+        family_p: "Dad, Mom, Son. We write the music of ideas. Sometimes we argue, but always in the same key.",
+        
+        // AI (Orchestra)
+        ai_h: "The Digital Orchestra",
+        ai_p: "Gemini — our Conductor (managing the chaos). The Orchestra features: Claude (First Violin of Code) and ElevenLabs (The Golden Voice). Playing without false notes.",
+        
+        philosophy: "Carbon & Silicon symbiosis. The high art of technology.",
         projects: "Cargo Bay",
         art_p: "Art with a Ukrainian soul. Now you can understand paintings, not just stare at them.",
         btn_open: "Open Hatch",
         alpha_h: "Digital Alphabet",
         alpha_p: "We figured out how to speak so even aliens would understand us.",
-        btn_soon: "Launch Soon",
+        btn_soon: "Premiere Soon",
         footer: "This is just the beginning. Brakes are for cowards."
     }
 };
