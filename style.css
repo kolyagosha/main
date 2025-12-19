@@ -4,169 +4,94 @@
 body {
     background-color: #050510;
     color: #e0e6ed;
-    font-family: 'Courier New', Courier, monospace; /* Шрифт терминала */
+    font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center; /* Центрируем по вертикали тоже */
+    align-items: center;
     padding: 20px;
 }
 
-/* Переключатель языка */
-.lang-switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 100;
-}
+/* Переключатель */
+.lang-switch { position: absolute; top: 20px; right: 20px; z-index: 100; }
 .lang-switch button {
-    background: #000;
-    border: 1px solid #00d4ff;
-    color: #00d4ff;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 5px 10px;
-    margin-left: 5px;
-    font-family: inherit;
+    background: #000; border: 1px solid #00d4ff; color: #00d4ff;
+    cursor: pointer; font-weight: bold; padding: 5px 10px; margin-left: 5px; font-family: inherit;
 }
-.lang-switch button.active-lang {
-    background: #00d4ff;
-    color: #000;
-}
+.lang-switch button.active-lang { background: #00d4ff; color: #000; }
 
-/* АНИМАЦИЯ ЗВЕЗД */
+/* Звезды */
 @keyframes spaceFlight {
     from { background-position: 0 0, 0 0, 0 0; }
-    to { background-position: 0 1000px, 0 500px, 0 250px; } /* Движение вниз */
+    to { background-position: 0 1000px, 0 500px, 0 250px; }
 }
-
 .stars {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    /* Три слоя звезд разного размера */
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-image: 
         radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
         radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
         radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 1px);
     background-size: 500px 500px, 300px 300px, 200px 200px;
     z-index: -10;
-    animation: spaceFlight 60s linear infinite; /* Звезды летят! */
+    animation: spaceFlight 60s linear infinite;
 }
 
-/* НОВЫЙ КОНТЕЙНЕР (Бортовой компьютер) */
+/* Контейнер */
 .rocket-body {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    background: rgba(16, 20, 30, 0.9); /* Темный полупрозрачный фон */
-    border: 2px solid #00d4ff; /* Неоновая рамка */
-    /* Срезанные углы (Clip-path) - очень технологично */
-    clip-path: polygon(
-        20px 0, 100% 0, 
-        100% calc(100% - 20px), calc(100% - 20px) 100%, 
-        0 100%, 0 20px
-    );
-    padding: 40px;
-    text-align: center;
+    position: relative; width: 100%; max-width: 800px;
+    background: rgba(16, 20, 30, 0.95);
+    border: 2px solid #00d4ff;
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+    padding: 40px; text-align: center;
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
 }
 
-/* Декор углов рамки (через псевдоэлементы, если клип-пат сложен, сделаем проще рамкой) */
-.rocket-body::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 5px;
-    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
-    opacity: 0.5;
-}
-
-/* Типографика */
-.hero-section h1 {
-    font-size: 3rem;
-    color: #fff;
-    text-shadow: 2px 2px 0px #00d4ff;
-    letter-spacing: 5px;
-    margin-bottom: 10px;
-}
-
-.mission {
-    border-top: 1px dashed #333;
-    border-bottom: 1px dashed #333;
-    padding: 15px;
-    margin-top: 20px;
-    color: #00d4ff;
-}
-
-h2 {
-    color: #bd00ff;
-    margin: 50px 0 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+.hero-section h1 { font-size: 3rem; color: #fff; text-shadow: 2px 2px 0px #00d4ff; margin-bottom: 10px; }
+.mission { border-top: 1px dashed #333; border-bottom: 1px dashed #333; padding: 15px; margin-top: 20px; color: #00d4ff; }
+h2 { color: #bd00ff; margin: 40px 0 20px; text-transform: uppercase; letter-spacing: 2px; font-size: 1.5rem; }
 
 /* Сетка */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-@media(min-width: 600px) {
-    .grid { grid-template-columns: 1fr 1fr; }
-}
+.grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media(min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
 
-/* Карточки */
-.card {
-    border: 1px solid #333;
-    background: rgba(0,0,0,0.5);
-    padding: 20px;
-    transition: 0.3s;
-}
-.card:hover {
-    border-color: #bd00ff;
-    box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);
-}
-
+/* КАРТОЧКИ ОБЩИЕ */
+.card { padding: 20px; transition: 0.3s; border: 1px solid #333; background: rgba(0,0,0,0.5); }
 .card h3 { margin-bottom: 10px; color: #fff; }
 
-/* Кнопки */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 30px;
-    background: transparent;
-    border: 1px solid #00d4ff;
-    color: #00d4ff;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.2s;
-}
-.btn:hover {
-    background: #00d4ff;
-    color: #000;
-    box-shadow: 0 0 20px #00d4ff;
-}
-.btn.disabled {
-    border-color: #555;
-    color: #555;
-    cursor: default;
-}
-.btn.disabled:hover {
-    background: transparent;
-    box-shadow: none;
-    color: #555;
-}
+/* СТИЛИ СТАТУСОВ */
+.status { font-size: 0.75rem; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px; }
 
-/* Футер */
-footer {
-    margin-top: 50px;
-    font-size: 0.8rem;
-    color: #666;
-}
+/* 1. READY (Зеленый) */
+.card.active-project { border-color: #00ff88; }
+.card.active-project:hover { box-shadow: 0 0 15px rgba(0, 255, 136, 0.2); }
+.status.ready { color: #00ff88; }
 
-/* Иллюминатор убираем или делаем просто кружком загрузки */
-.window-decor {
-    display: none; /* Убрали, чтобы не рисковать с ассоциациями */
+/* 2. DEV (Желтый/Оранжевый) */
+.card.blueprint { border: 1px dashed #ffae00; opacity: 0.9; }
+.status.dev { color: #ffae00; }
+
+/* 3. DREAM (Фиолетовый/Магия) */
+.dream-section { margin-top: 50px; }
+.card.dream {
+    border: 2px solid #bd00ff;
+    background: linear-gradient(180deg, rgba(189, 0, 255, 0.05), rgba(0,0,0,0.8));
+    box-shadow: 0 0 20px rgba(189, 0, 255, 0.2);
 }
+.status.vision { color: #bd00ff; animation: pulse 2s infinite; }
+
+/* КНОПКИ */
+.btn { display: inline-block; padding: 10px 20px; border: 1px solid #00d4ff; color: #00d4ff; text-decoration: none; font-weight: bold; text-transform: uppercase; margin-top: 10px; transition: 0.3s; }
+.btn:hover { background: #00d4ff; color: #000; }
+
+.btn.construction { border-color: #ffae00; color: #ffae00; }
+.btn.construction:hover { background: #ffae00; color: #000; }
+
+.btn.vision-btn { border-color: #bd00ff; color: #bd00ff; }
+.btn.vision-btn:hover { background: #bd00ff; color: #fff; }
+
+.btn.disabled { pointer-events: none; opacity: 0.6; border-style: dotted; }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+footer { margin-top: 50px; font-size: 0.8rem; color: #666; }
