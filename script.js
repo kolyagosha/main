@@ -20,7 +20,7 @@ const translations = {
         sport_p: "Складай тести онлайн, поки ми кодимо між відключеннями світла. Студентський спорт без болю.",
         btn_dev: "У збірці",
         dream_title: "НАША МРІЯ",
-        dream_p: "SSRM.BAR — віртуальний бар, де напої розкривають таємні бажання. Складно. Дорого. Неминуче.",
+        dream_p: "З цього все почалося. Віртуальний бар, де напої задаватимуть тон твоєму настрою. Дорого. Складно. Неминуче. Шукаємо підтримку.",
         support_link: "Пригостити екіпаж кавою, а ІІ — плюшкою",
         footer: "Це тільки початок. Гальма вигадали боягузи."
     },
@@ -45,7 +45,7 @@ const translations = {
         sport_p: "Pass your tests online while we code between blackouts. Student sports without the pain.",
         btn_dev: "Assembling",
         dream_title: "OUR DREAM",
-        dream_p: "SSRM.BAR — a virtual bar where drinks reveal hidden desires. Complex. Expensive. Inevitable.",
+        dream_p: "This is where it all began. A virtual bar where drinks set the tone of your mood. Expensive. Complex. Inevitable. Seeking support.",
         support_link: "Buy the crew a coffee or the AI a donut",
         footer: "This is just the beginning. Brakes are for cowards."
     }
