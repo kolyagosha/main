@@ -21,7 +21,7 @@ const translations = {
         btn_dev: "У збірці",
         dream_title: "НАША МРІЯ",
         dream_p: "З цього все почалося. Віртуальний бар, де напої задаватимуть тон твоєму настрою. Дорого. Складно. Неминуче. Шукаємо підтримку.",
-        support_link: "Пригостити екіпаж кавою, а ІІ — плюшкою",
+        support_link: "Пригостити екіпаж кавою, а ШІ — плюшкою",
         footer: "Це тільки початок. Гальма вигадали боягузи."
     },
     en: {
@@ -39,13 +39,13 @@ const translations = {
         alpha_p: "A new language of communication. A surreal take on reality. Live at altctrdel.xyz",
         btn_launch: "Liftoff",
         proj_dev: "In Hangar (Dev)",
-        ssrm_p: "The Mathematics of Relationships. Game theory model for saving marriages. Awaiting verdict from Professor.",
+        ssrm_p: "The Mathematics of Relationships. Game theory model for saving marriages. Awaiting the Professor’s verdict.",
         btn_check: "Check Status",
         sport_h: "Project \"Phys-Ed\"",
         sport_p: "Pass your tests online while we code between blackouts. Student sports without the pain.",
         btn_dev: "Assembling",
         dream_title: "OUR DREAM",
-        dream_p: "This is where it all began. A virtual bar where drinks set the tone of your mood. Expensive. Complex. Inevitable. Seeking support.",
+        dream_p: "This is where it all began. A virtual bar where drinks set the tone for your mood.. Expensive. Complex. Inevitable. Seeking support.",
         support_link: "Buy the crew a coffee or the AI a donut",
         footer: "This is just the beginning. Brakes are for cowards."
     }
