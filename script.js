@@ -6,7 +6,7 @@ const translations = {
         family_h: "Сім'я (Композитори ідей)",
         family_p: "Тато, Мама, Син. Ми пишемо музику ідей. Сперечаємось до хрипу, але завжди в одній тональності. Творимо навіть під час блекаутів, бо світло всередині нас.",
         ai_h: "Цифровий Джаз-Бенд",
-        ai_p: "ШІ — це партнери, а не просто інструменти, і кожен веде свою партію! Gemini — диригент. Ритм-секція: Claude (код). Голос: ElevenLabs. Соло та драйв: Grok. Візуальні ефекти: Nana Banano/Veo",
+        ai_p: "ШІ — це партнери, а не просто інструменти, і кожен веде свою партію! Gemini — диригент. Ритм-секція: Claude (код). Голос: ElevenLabs. Соло та драйв: Grok. Візуальні ефекти: Nana Banana/Veo",
         proj_ready: "На орбіті (Готові)",
         art_p: "Мистецтво з українською душею. Розуміти, а не просто дивитися. Живий MVP, готовий до грантів.",
         btn_open: "Відкрити люк",
@@ -14,7 +14,7 @@ const translations = {
         alpha_p: "Нова мова комунікації. Сюрреалістичний погляд на реальність. Сайт altctrdel.xyz",
         btn_launch: "На старт",
         proj_dev: "В ангарі (Розробка)",
-        ssrm_p: "Математика стосунків. Динамічна модель теорії ігор для порятунку шлюбів. Чекаємо на вердикт професора Батаб'яла.",
+        ssrm_p: "Математика стосунків. Динамічна модель теорії ігор для порятунку шлюбів. Чекаємо на вердикт Професора.",
         btn_check: "Перевірити статус",
         sport_h: "Проєкт \"Фіз-Ра\"",
         sport_p: "Складай тести онлайн, поки ми кодимо між відключеннями світла. Студентський спорт без болю.",
@@ -39,7 +39,7 @@ const translations = {
         alpha_p: "A new language of communication. A surreal take on reality. Live at altctrdel.xyz",
         btn_launch: "Liftoff",
         proj_dev: "In Hangar (Dev)",
-        ssrm_p: "The Mathematics of Relationships. Game theory model for saving marriages. Awaiting Professor Batabyal's verdict.",
+        ssrm_p: "The Mathematics of Relationships. Game theory model for saving marriages. Awaiting verdict from Professor.",
         btn_check: "Check Status",
         sport_h: "Project \"Phys-Ed\"",
         sport_p: "Pass your tests online while we code between blackouts. Student sports without the pain.",
@@ -85,15 +85,3 @@ function setLang(lang) {
     event.target.classList.add('active-lang');
 }
 
-// 1. При загрузке проверяем, какой язык был выбран раньше
-window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('siteLang') || 'ua';
-    setLang(savedLang);
-});
-
-// 2. Модифицируй свою функцию setLang, чтобы она запоминала выбор
-function setLang(lang) {
-    localStorage.setItem('siteLang', lang); // Сохраняем выбор
-    
-    // ... твой остальной код смены текстов ...
-}
