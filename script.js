@@ -81,12 +81,8 @@ function setLang(lang) {
     document.getElementById('t-support-link').innerText = translations[lang].support_link;
     document.getElementById('t-footer').innerText = translations[lang].footer;
 
-    const buttons = document.querySelectorAll('.lang-switch button');
-    buttons.forEach(btn => {
-        btn.classList.remove('active-lang');
-        // Проверяем по тексту или атрибуту, какую кнопку подсветить
-        if(btn.innerText.toLowerCase() === lang) {
-            btn.classList.add('active-lang');
-        }
+   const buttons = document.querySelectorAll('.lang-switch button');
+    buttons.forEach(btn => btn.classList.remove('active-lang'));
+    event.target.classList.add('active-lang');
 }
 
