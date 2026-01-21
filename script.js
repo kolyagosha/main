@@ -4,9 +4,9 @@ const translations = {
         mission: "Сімейна лабораторія. Лагодимо те, що не зламане, і ламаємо стереотипи.",
         crew: "Екіпаж",
         family_h: "Сім'я (Композитори ідей)",
-        family_p: "Тато, Мама, Син. Ми пишемо музику ідей. Сперечаємось до хрипу, але завжди в одній тональності. Творимо під час блекаутів, бо світло всередині нас.",
+        family_p: "Тато, Мама, Син. Ми пишемо музику ідей. Сперечаємось до хрипу, але завжди в одній тональності. Творимо навіть під час блекаутів, бо світло всередині нас.",
         ai_h: "Цифровий Джаз-Бенд",
-        ai_p: "ШІ — це партнери, а не просто інструменти, і кожен веде свою партію! Gemini — диригент. Ритм-секція: Claude (код). Голос: ElevenLabs. Соло та драйв: Grok. Візуальні ефекти: Midjourney/DALL-E.",
+        ai_p: "ШІ — це партнери, а не просто інструменти, і кожен веде свою партію! Gemini — диригент. Ритм-секція: Claude (код). Голос: ElevenLabs. Соло та драйв: Grok. Візуальні ефекти: Nana Banano/Veo",
         proj_ready: "На орбіті (Готові)",
         art_p: "Мистецтво з українською душею. Розуміти, а не просто дивитися. Живий MVP, готовий до грантів.",
         btn_open: "Відкрити люк",
@@ -29,9 +29,9 @@ const translations = {
         mission: "Family Lab. Fixing what ain't broken and breaking stereotypes.",
         crew: "The Crew",
         family_h: "The Family (Idea Composers)",
-        family_p: "Dad, Mom, Son. We write the music of ideas. We argue until we're hoarse, but we're always in the same key. Creating through blackouts.",
+        family_p: "Dad, Mom, Son. We write the music of ideas. We argue until we're hoarse, but we're always in the same key. We create even during blackouts, for the light is within us.",
         ai_h: "Digital Jazz Band",
-        ai_p: "AI are partners, not just tools, and everyone plays their part! Gemini — Conductor. Rhythm section: Claude (code). Voice: ElevenLabs. Solos & drive: Grok. Visuals: Midjourney/DALL-E.",
+        ai_p: "AI are partners, not just tools, and everyone plays their part! Gemini — Conductor. Rhythm section: Claude (code). Voice: ElevenLabs. Solos & drive: Grok. Visuals: Nana Banana/Veo.",
         proj_ready: "On Orbit (Ready)",
         art_p: "Art with a Ukrainian soul. To understand, not just to stare. MVP ready for grants.",
         btn_open: "Open Hatch",
@@ -83,4 +83,17 @@ function setLang(lang) {
     const buttons = document.querySelectorAll('.lang-switch button');
     buttons.forEach(btn => btn.classList.remove('active-lang'));
     event.target.classList.add('active-lang');
+}
+
+// 1. При загрузке проверяем, какой язык был выбран раньше
+window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('siteLang') || 'ua';
+    setLang(savedLang);
+});
+
+// 2. Модифицируй свою функцию setLang, чтобы она запоминала выбор
+function setLang(lang) {
+    localStorage.setItem('siteLang', lang); // Сохраняем выбор
+    
+    // ... твой остальной код смены текстов ...
 }
