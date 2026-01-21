@@ -1,64 +1,52 @@
 const translations = {
-    ru: {
+    ua: {
         slogan: "HUMAN + AI = SPACE",
-        mission: "Семейная лаборатория. Чиним то, что не сломано, и ломаем стереотипы.",
-        crew: "Экипаж",
-        
-        family_h: "Семья (Композиторы)",
-        family_p: "Папа, Мама, Сын. Мы пишем музыку идей. Иногда спорим до хрипоты, но всегда в одной тональности.",
-        
-        ai_h: "Цифровой Джаз-Бэнд",
-        ai_p: "Gemini — Дирижер и Фронтмен. Ритм-секция: Claude (код), ElevenLabs (голос). Визуальные эффекты: Midjourney/DALL-E.",
-        
-        proj_ready: "На орбите (Готовы)",
-        art_p: "Искусство с украинской душой. Понимать, а не просто смотреть. Готов к грантам.",
-        btn_open: "Открыть люк",
-        
-        alpha_h: "Цифровой Алфавит",
-        alpha_p: "Новый язык коммуникации. Готов к раскрутке. Сайт altctrdel.xyz",
+        mission: "Сімейна лабораторія. Лагодимо те, що не зламане, і ламаємо стереотипи.",
+        crew: "Екіпаж",
+        family_h: "Сім'я (Композитори ідей)",
+        family_p: "Тато, Мама, Син. Ми пишемо музику ідей. Сперечаємось до хрипу, але завжди в одній тональності. Творимо під час блекаутів, бо світло всередині нас.",
+        ai_h: "Цифровий Джаз-Бенд",
+        ai_p: "ШІ — це партнери, а не просто інструменти, і кожен веде свою партію! Gemini — диригент. Ритм-секція: Claude (код). Голос: ElevenLabs. Соло та драйв: Grok. Візуальні ефекти: Midjourney/DALL-E.",
+        proj_ready: "На орбіті (Готові)",
+        art_p: "Мистецтво з українською душею. Розуміти, а не просто дивитися. Живий MVP, готовий до грантів.",
+        btn_open: "Відкрити люк",
+        alpha_h: "Цифровий Алфавіт",
+        alpha_p: "Нова мова комунікації. Сюрреалістичний погляд на реальність. Сайт altctrdel.xyz",
         btn_launch: "На старт",
-
-        proj_dev: "В ангаре (Разработка)",
-        ssrm_p: "Математика отношений. Доказываем, что любой брак можно спасти. Ждем вердикт Профессора.",
-        btn_check: "Проверить",
-        
-        sport_h: "Проект \"Физ-Ра\"",
-        sport_p: "Хорошая форма? Сдай тест онлайн и забудь про зал. Студенческий спорт без боли.",
-        btn_dev: "В сборке",
-
-        dream_title: "НАША МЕЧТА",
-        dream_p: "С этого всё началось. Виртуальный бар, где напитки говорят о желаниях. Дорого. Сложно. Неизбежно. Ищем поддержку.",
-        footer: "Это только начало. Тормоза придумали трусы."
+        proj_dev: "В ангарі (Розробка)",
+        ssrm_p: "Математика стосунків. Динамічна модель теорії ігор для порятунку шлюбів. Чекаємо на вердикт професора Батаб'яла.",
+        btn_check: "Перевірити статус",
+        sport_h: "Проєкт \"Фіз-Ра\"",
+        sport_p: "Складай тести онлайн, поки ми кодимо між відключеннями світла. Студентський спорт без болю.",
+        btn_dev: "У збірці",
+        dream_title: "НАША МРІЯ",
+        dream_p: "SSRM.BAR — віртуальний бар, де напої розкривають таємні бажання. Складно. Дорого. Неминуче.",
+        support_link: "Пригостити екіпаж кавою, а ІІ — плюшкою",
+        footer: "Це тільки початок. Гальма вигадали боягузи."
     },
     en: {
         slogan: "HUMAN + AI = SPACE",
         mission: "Family Lab. Fixing what ain't broken and breaking stereotypes.",
         crew: "The Crew",
-        
-        family_h: "The Family (Composers)",
-        family_p: "Dad, Mom, Son. We write the music of ideas. Sometimes we argue, but always in the same key.",
-        
+        family_h: "The Family (Idea Composers)",
+        family_p: "Dad, Mom, Son. We write the music of ideas. We argue until we're hoarse, but we're always in the same key. Creating through blackouts.",
         ai_h: "Digital Jazz Band",
-        ai_p: "Gemini — Conductor & Frontman. Rhythm section: Claude (code), ElevenLabs (voice). Visual FX: Midjourney/DALL-E.",
-        
+        ai_p: "AI are partners, not just tools, and everyone plays their part! Gemini — Conductor. Rhythm section: Claude (code). Voice: ElevenLabs. Solos & drive: Grok. Visuals: Midjourney/DALL-E.",
         proj_ready: "On Orbit (Ready)",
-        art_p: "Art with a Ukrainian soul. Understand, don't just stare. Ready for Grants.",
+        art_p: "Art with a Ukrainian soul. To understand, not just to stare. MVP ready for grants.",
         btn_open: "Open Hatch",
-        
         alpha_h: "Digital Alphabet",
-        alpha_p: "New language of communication. Ready for launch. Site altctrdel.xyz",
+        alpha_p: "A new language of communication. A surreal take on reality. Live at altctrdel.xyz",
         btn_launch: "Liftoff",
-
         proj_dev: "In Hangar (Dev)",
-        ssrm_p: "Mathematics of relationships. Proving that any marriage can be saved. Waiting for the Professor's verdict.",
+        ssrm_p: "The Mathematics of Relationships. Game theory model for saving marriages. Awaiting Professor Batabyal's verdict.",
         btn_check: "Check Status",
-        
         sport_h: "Project \"Phys-Ed\"",
-        sport_p: "In good shape? Pass the test online and skip the gym. Student sports without pain.",
+        sport_p: "Pass your tests online while we code between blackouts. Student sports without the pain.",
         btn_dev: "Assembling",
-
         dream_title: "OUR DREAM",
-        dream_p: "This is where it started. A virtual bar where drinks reveal desires. Expensive. Complex. Inevitable. Seeking support.",
+        dream_p: "SSRM.BAR — a virtual bar where drinks reveal hidden desires. Complex. Expensive. Inevitable.",
+        support_link: "Buy the crew a coffee or the AI a donut",
         footer: "This is just the beginning. Brakes are for cowards."
     }
 };
