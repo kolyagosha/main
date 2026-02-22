@@ -14,7 +14,7 @@ const translations = {
         alpha_p: "Нова мова комунікації. Сюрреалістичний погляд на реальність. Сайт altctrdel.xyz",
         btn_launch: "На старт",
         proj_dev: "В процесі",
-        ssrm_H: "Математика стосунків",
+        ssrm_h: "Математика стосунків",
         ssrm_p: "Математика стосунків. Динамічна модель для збереження шлюбів. Чекаємо на вердикт Професора.",
         btn_check: "Побачити візуалізацію",
         sport_h: "Проєкт \"Фіз-Ра\"",
@@ -71,6 +71,7 @@ function setLang(lang) {
     document.getElementById('t-btn-launch').innerText = translations[lang].btn_launch;
 
     document.getElementById('t-proj-dev').innerText = translations[lang].proj_dev;
+    document.getElementById('t-ssrm-h').innerText = translations[lang].ssrm_h;
     document.getElementById('t-ssrm-p').innerText = translations[lang].ssrm_p;
     document.getElementById('t-btn-check').innerText = translations[lang].btn_check;
     
