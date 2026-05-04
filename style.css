@@ -204,3 +204,13 @@ footer { margin-top: 50px; font-size: 0.8rem; color: #666; }
     .rocket-body { padding: 20px; }
     .grid { grid-template-columns: 1fr; }
 }
+
+
+
+/* Выделяем подзаголовок в друзьях */
+#friends-sub {
+    color: #00d4ff; /* Кислотно-зеленый акцент */
+    font-weight: bold;
+    text-transform: uppercase; /* Можно сделать заглавными, как сигнал */
+    font-size: 0.9em;
+}
