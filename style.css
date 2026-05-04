@@ -169,3 +169,38 @@ footer { margin-top: 50px; font-size: 0.8rem; color: #666; }
 }
 
 
+
+/* СТАТУС SUPPORT (Голубой/Цифровой) */
+.status.support { color: #00d4ff; text-shadow: 0 0 5px rgba(0, 212, 255, 0.5); }
+
+/* Специфика для карточки друзей */
+.friend-card {
+    border-style: double; /* Выделяем особого друга двойной рамкой */
+    border-width: 3px;
+}
+
+/* Ссылки на статьи SSRN */
+.ssrn-links {
+    margin: 15px 0;
+    font-size: 0.85rem;
+}
+
+.ssrn-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    border-bottom: 1px dashed #00d4ff;
+    transition: 0.3s;
+    margin: 0 5px;
+}
+
+.ssrn-links a:hover {
+    color: #fff;
+    border-bottom-style: solid;
+}
+
+/* Фикс для мобилок: чтобы сетка не ломалась на маленьких экранах */
+@media(max-width: 480px) {
+    .hero-section h1 { font-size: 2rem; }
+    .rocket-body { padding: 20px; }
+    .grid { grid-template-columns: 1fr; }
+}
