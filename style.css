@@ -154,7 +154,7 @@ footer { margin-top: 50px; font-size: 0.8rem; color: #666; }
 
 
 /* Выделяем подзаголовок в друзьях */
-#t-friends-sub {
+#friends-sub {
     color: #00d4ff; /* Кислотно-зеленый акцент */
     font-weight: bold;
     text-transform: uppercase; /* Можно сделать заглавными, как сигнал */
