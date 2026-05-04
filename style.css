@@ -145,3 +145,10 @@ footer { margin-top: 50px; font-size: 0.8rem; color: #666; }
     80% { clip: rect(70px, 9999px, 100px, 0); }
     100% { clip: rect(20px, 9999px, 40px, 0); }
 }
+
+
+.friend-card {
+    grid-column: 1 / -1; /* Растянуться от первой до последней колонки */
+    width: 100%;
+}
+
