@@ -160,3 +160,9 @@ footer { margin-top: 50px; font-size: 0.8rem; color: #666; }
     text-transform: uppercase; /* Можно сделать заглавными, как сигнал */
     font-size: 0.9em;
 }
+
+
+.friend-card {
+    grid-column: 1 / -1; /* Растянуться от первой до последней колонки */
+    width: 100%;
+}
