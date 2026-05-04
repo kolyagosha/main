@@ -162,7 +162,4 @@ footer { margin-top: 50px; font-size: 0.8rem; color: #666; }
 }
 
 
-.friend-card {
-    grid-column: 1 / -1; /* Растянуться от первой до последней колонки */
-    width: 100%;
-}
+
