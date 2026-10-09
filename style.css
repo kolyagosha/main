@@ -1,12 +1,11 @@
-/* ===== RESET ===== */
+/* База */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ===== BASE ===== */
 body {
     background-color: #050510;
     color: #e0e6ed;
     font-family: 'Courier New', Courier, monospace;
-    line-height: 1.7;
+    line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
@@ -15,17 +14,14 @@ body {
     padding: 20px;
 }
 
-/* ===== STARS ===== */
+/* Звезды */
 @keyframes spaceFlight {
-    from { background-position: 0 0, 40px 0, 0 0; }
-    to   { background-position: 15px 1000px, 55px 500px, 0 250px; }
+    from { background-position: 0 0, 0 0, 0 0; }
+    to { background-position: 0 1000px, 0 500px, 0 250px; }
 }
-
 .stars {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-image:
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
         radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
         radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
         radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 1px);
@@ -34,309 +30,112 @@ body {
     animation: spaceFlight 60s linear infinite;
 }
 
-/* ===== CONTAINER ===== */
+/* Контейнер */
 .rocket-body {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
+    position: relative; width: 100%; max-width: 800px;
     background: rgba(16, 20, 30, 0.95);
     border: 2px solid #00d4ff;
     clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
-    padding: 40px;
-    text-align: center;
+    padding: 40px; text-align: center;
     box-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
 }
 
-/* ===== HERO ===== */
-.hero-section h1 {
-    font-size: 3rem;
-    color: #fff;
-    text-shadow: 2px 2px 0px #00d4ff;
-    margin-bottom: 10px;
-}
+.hero-section h1 { font-size: 3rem; color: #fff; text-shadow: 2px 2px 0px #00d4ff; margin-bottom: 10px; }
+.mission { border-top: 1px dashed #333; border-bottom: 1px dashed #333; padding: 15px; margin-top: 20px; color: #00d4ff; }
+h2 { color: #bd00ff; margin: 40px 0 20px; text-transform: uppercase; letter-spacing: 2px; font-size: 1.5rem; }
 
-.subtitle {
-    color: #aaa;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
+/* Сетка */
+.grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media(min-width: 600px) { .grid { grid-template-columns: 1fr 1fr; } }
 
-.mission {
-    border-top: 1px dashed #333;
-    border-bottom: 1px dashed #333;
-    padding: 15px;
-    margin-top: 20px;
-    color: #00d4ff;
-}
+/* КАРТОЧКИ ОБЩИЕ */
+.card { padding: 20px; transition: 0.3s; border: 1px solid #333; background: rgba(0,0,0,0.5); }
+.card h3 { margin-bottom: 10px; color: #fff; }
 
-/* ===== HEADINGS ===== */
-h2 {
-    color: #bd00ff;
-    margin: 40px 0 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-}
+/* СТИЛИ СТАТУСОВ */
+.status { font-size: 0.75rem; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px; }
 
-/* ===== GRID ===== */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-@media (min-width: 600px) {
-    .grid { grid-template-columns: 1fr 1fr; }
-}
-
-/* ===== CARDS ===== */
-.card {
-    padding: 20px;
-    transition: box-shadow 0.3s, border-color 0.3s;
-    border: 1px solid #333;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: left;
-}
-
-.card h3 {
-    margin-bottom: 12px;
-    color: #fff;
-}
-
-.card p {
-    margin-bottom: 8px;
-    color: #c0c8d0;
-}
-
-.card p:last-of-type {
-    margin-bottom: 0;
-}
-
-/* ===== STATUS BADGES ===== */
-.status {
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    display: block;
-}
-
-/* 1. READY — green */
+/* 1. READY (Зеленый) */
 .card.active-project { border-color: #00ff88; }
-.card.active-project:hover { box-shadow: 0 0 15px rgba(0, 255, 136, 0.2); }
+.card.active-project:hover { box-shadow: 0 0 15px rgba(0, 255, 136, 0.2); transform: translateY(-3px); }
 .status.ready { color: #00ff88; }
 
-/* 2. DEV — amber */
-.card.blueprint {
-    border: 1px dashed #ffae00;
-    opacity: 0.9;
-    grid-column: 1 / -1;
-    width: 100%;
-}
+/* 2. DEV (Желтый/Оранжевый) */
+.card.blueprint { border: 1px dashed #ffae00; opacity: 0.9; }
+.card.blueprint:hover { transform: translateY(-3px); }
 .status.dev { color: #ffae00; }
 
-/* 3. DREAM — purple */
+/* НОВЫЙ БЛОК - PARTNERS (Розовый/Красный) */
+.allies-section { margin-top: 20px; }
+.card.partner { border-color: #ff3366; }
+.card.partner:hover { box-shadow: 0 0 15px rgba(255, 51, 102, 0.2); transform: translateY(-3px); }
+.status.support { color: #ff3366; }
+
+/* 3. DREAM (Фиолетовый/Магия) */
 .dream-section { margin-top: 50px; }
 .card.dream {
     border: 2px solid #bd00ff;
-    background: linear-gradient(180deg, rgba(189, 0, 255, 0.05), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(180deg, rgba(189, 0, 255, 0.05), rgba(0,0,0,0.8));
     box-shadow: 0 0 20px rgba(189, 0, 255, 0.2);
 }
-
-@keyframes pulse {
-    0%   { opacity: 1; }
-    50%  { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
 .status.vision { color: #bd00ff; animation: pulse 2s infinite; }
 
-/* 4. SUPPORT — cyan */
-.status.support {
-    color: #00d4ff;
-    text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+/* КНОПКИ */
+.btn { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 10px 20px; 
+    border: 1px solid #00d4ff; 
+    color: #00d4ff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    margin-top: 10px; 
+    transition: all 0.3s ease; 
+    min-height: 44px;
 }
-
-/* ===== FRIENDS ===== */
-.friend-card {
-    grid-column: 1 / -1;
-    width: 100%;
-    border-style: double;
-    border-width: 3px;
-}
-
-/* ===== BUTTONS ===== */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #00d4ff;
-    color: #00d4ff;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 15px;
-    transition: background 0.3s, color 0.3s;
-    font-family: inherit;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-}
-
-.btn:hover { background: #00d4ff; color: #000; }
+.btn:hover { background: #00d4ff; color: #000; box-shadow: 0 0 15px rgba(0, 212, 255, 0.5); }
 
 .btn.construction { border-color: #ffae00; color: #ffae00; }
-.btn.construction:hover { background: #ffae00; color: #000; }
+.btn.construction:hover { background: #ffae00; color: #000; box-shadow: 0 0 15px rgba(255, 174, 0, 0.5); }
 
 .btn.vision-btn { border-color: #bd00ff; color: #bd00ff; }
-.btn.vision-btn:hover { background: #bd00ff; color: #fff; }
+.btn.vision-btn:hover { background: #bd00ff; color: #fff; box-shadow: 0 0 15px rgba(189, 0, 255, 0.5); }
 
-.btn.disabled { pointer-events: none; opacity: 0.6; border-style: dotted; }
+.btn.disabled { pointer-events: none; opacity: 0.6; border-style: dotted; box-shadow: none; }
 
-/* ===== SSRN LINKS ===== */
-.ssrn-links {
-    margin: 12px 0;
-    font-size: 0.85rem;
-}
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+footer { margin-top: 50px; font-size: 0.8rem; color: #666; }
 
-.ssrn-links a {
-    color: #00d4ff;
-    text-decoration: none;
-    border-bottom: 1px dashed #00d4ff;
-    transition: color 0.3s, border-bottom-style 0.3s;
-}
-
-.ssrn-links a:hover {
-    color: #fff;
-    border-bottom-style: solid;
-}
-
-.ssrn-divider {
-    color: #444;
-    margin: 0 8px;
-}
-
-/* ===== CINEMATIC LINE ===== */
-.cinematic-line {
-    font-style: italic;
-    color: #00d4ff;
-    margin: 12px 0 15px;
-    font-size: 0.95em;
-}
-
-/* ===== VISION YEAR ===== */
-.vision-year {
-    color: #bd00ff;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    margin-top: 10px;
-}
-
-/* ===== GLITCH EFFECT ===== */
-/* FIX: replaced deprecated clip:rect() with clip-path:inset() */
-.glitch-text {
-    position: relative;
-    display: inline-block;
-}
-
-.glitch-text::before,
-.glitch-text::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+/* Эффект Глюка (Glitch) */
+.glitch-text { position: relative; display: inline-block; }
+.glitch-text::before, .glitch-text::after {
+    content: 'HAI-GUYS';
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(16, 20, 30, 0.95);
 }
-
 .glitch-text::before {
-    left: 2px;
-    text-shadow: -1px 0 #bd00ff;
+    left: 2px; text-shadow: -1px 0 #bd00ff; clip: rect(24px, 550px, 90px, 0);
     animation: glitch-anim-2 3s infinite linear alternate-reverse;
 }
-
 .glitch-text::after {
-    left: -2px;
-    text-shadow: -1px 0 #00d4ff;
+    left: -2px; text-shadow: -1px 0 #00d4ff; clip: rect(85px, 550px, 140px, 0);
     animation: glitch-anim 2.5s infinite linear alternate-reverse;
 }
-
 @keyframes glitch-anim {
-    0%   { clip-path: inset(10px 0 calc(100% - 30px) 0); }
-    20%  { clip-path: inset(80px 0 calc(100% - 100px) 0); }
-    40%  { clip-path: inset(10px 0 calc(100% - 40px) 0); }
-    60%  { clip-path: inset(60px 0 calc(100% - 80px) 0); }
-    80%  { clip-path: inset(20px 0 calc(100% - 60px) 0); }
-    100% { clip-path: inset(90px 0 calc(100% - 110px) 0); }
+    0% { clip: rect(10px, 9999px, 30px, 0); }
+    20% { clip: rect(80px, 9999px, 100px, 0); }
+    40% { clip: rect(10px, 9999px, 40px, 0); }
+    60% { clip: rect(60px, 9999px, 80px, 0); }
+    80% { clip: rect(20px, 9999px, 60px, 0); }
+    100% { clip: rect(90px, 9999px, 110px, 0); }
 }
-
 @keyframes glitch-anim-2 {
-    0%   { clip-path: inset(60px 0 calc(100% - 90px) 0); }
-    20%  { clip-path: inset(10px 0 calc(100% - 50px) 0); }
-    40%  { clip-path: inset(90px 0 calc(100% - 100px) 0); }
-    60%  { clip-path: inset(30px 0 calc(100% - 60px) 0); }
-    80%  { clip-path: inset(70px 0 calc(100% - 100px) 0); }
-    100% { clip-path: inset(20px 0 calc(100% - 40px) 0); }
-}
-
-/* ===== FOOTER ===== */
-footer {
-    margin-top: 50px;
-    font-size: 0.85rem;
-    color: #666;
-    border-top: 1px dashed #222;
-    padding-top: 30px;
-}
-
-.footer-manifesto {
-    color: #e0e6ed;
-    font-size: 0.95rem;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-}
-
-.footer-kofi {
-    margin: 20px 0;
-}
-
-.footer-kofi p {
-    color: #f0f0f0;
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-    line-height: 1.6;
-}
-
-.kofi-btn {
-    height: 36px;
-    border: 0;
-    transition: opacity 0.2s;
-}
-
-.kofi-btn:hover { opacity: 0.85; }
-
-.footer-email {
-    margin-top: 20px;
-}
-
-.footer-email a {
-    color: #00d4ff;
-    text-decoration: none;
-    border-bottom: 1px dashed transparent;
-    transition: border-color 0.3s;
-}
-
-.footer-email a:hover {
-    border-bottom-color: #00d4ff;
-}
-
-.copyright {
-    margin-top: 15px;
-    color: #444;
-    font-size: 0.8rem;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 480px) {
-    .hero-section h1 { font-size: 2rem; }
-    .rocket-body { padding: 20px; }
-    .grid { grid-template-columns: 1fr; }
-    .card.blueprint { grid-column: auto; }
+    0% { clip: rect(60px, 9999px, 90px, 0); }
+    20% { clip: rect(10px, 9999px, 50px, 0); }
+    40% { clip: rect(90px, 9999px, 100px, 0); }
+    60% { clip: rect(30px, 9999px, 60px, 0); }
+    80% { clip: rect(70px, 9999px, 100px, 0); }
+    100% { clip: rect(20px, 9999px, 40px, 0); }
 }
