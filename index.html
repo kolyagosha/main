@@ -43,21 +43,47 @@
             </div>
         </section>
 
-        <section class="projects-section">
-            <h2>On Orbit (Ready)</h2>
-            <div class="grid">
-                <div class="card project active-project">
-                    <h3>ArtLibrary.site</h3>
-                    <p class="status ready">● MVP: 100% READY</p>
-                    <p>Art with a Ukrainian soul. Understand, don't just stare. Preparing for grants and looking for partners.</p>
-                    <a href="https://artlibrary.site" target="_blank" class="btn">Open Hatch</a>
+        <section class="projects-section science-section">
+            <h2>Science & Research (Dev)</h2>
+            <!-- Используем flex вместо grid, чтобы блоки шли друг под другом на всю ширину -->
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                
+                <!-- Публикации на SSRN (Идут первыми на всю ширину) -->
+                <div class="card academic">
+                    <h3>SSRN Publications</h3>
+                    <p class="status" style="color: #4facfe; font-size: 0.75rem; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px;">◌ ACADEMIC PAPERS</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 20px;">Our scientific foundation. We translate relationship dynamics into applied mathematics and linguistic algorithms.</p>
+                    
+                    <!-- Твоя Статья 1 -->
+                    <div class="paper-item">
+                        <h4>1. The Love Vector / SRM Framework</h4>
+                        <p>Reinterpreting Nash Equilibrium not as a romantic goal, but as a real-time 'Check Engine' diagnostic.</p>
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6510125" target="_blank" class="btn btn-small">Read Paper</a>
+                    </div>
+
+                    <!-- Твоя Статья 2 -->
+                    <div class="paper-item">
+                        <h4>2. Area 51 & Linguistic Audit</h4>
+                        <p>The 'Comma Effect'. How unseen semantic misalignments break partnerships, and why the 'Rule of 51%' builds antifragile bonds.</p>
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6509900" target="_blank" class="btn btn-small">Read Paper</a>
+                    </div>
+
+                    <!-- Задел для сына (Ожидание) -->
+                    <div class="paper-item upcoming">
+                        <h4>3. Upcoming Research [Drafting Phase]</h4>
+                        <p>New foundational articles by our Son are currently in the works, expanding the theoretical boundaries of our family lab.</p>
+                        <span class="btn disabled btn-small">Awaiting Drop</span>
+                    </div>
                 </div>
-                <div class="card project active-project">
-                    <h3>Digital Alphabet</h3>
-                    <p class="status ready">● LAUNCH: 100% READY</p>
-                    <p>New language of communication. Ready for launch. Site altctrdel.xyz</p>
-                    <a href="https://altctrdel.xyz" target="_blank" class="btn">Liftoff</a>
+
+                <!-- Платформа Diagnostic.love (Идет следом) -->
+                <div class="card project blueprint">
+                    <h3>Diagnostic.love (SRM)</h3>
+                    <p class="status dev">◌ MATH VALIDATION</p>
+                    <p>Scientific Relationship Model. A mathematical approach to dyadic calibration. Repair instead of replacement. Proving that any marriage can be saved.</p>
+                    <a href="https://diagnostic.love" target="_blank" class="btn construction">Check Status</a>
                 </div>
+
             </div>
         </section>
 
