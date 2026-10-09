@@ -65,11 +65,11 @@ h2 { color: #bd00ff; margin: 40px 0 20px; text-transform: uppercase; letter-spac
 .card.blueprint:hover { transform: translateY(-3px); }
 .status.dev { color: #ffae00; }
 
-/* НОВЫЙ БЛОК - PARTNERS (Розовый/Красный) */
+* НОВЫЙ БЛОК - PARTNERS (Теплый золотой) */
 .allies-section { margin-top: 20px; }
-.card.partner { border-color: #ff3366; }
-.card.partner:hover { box-shadow: 0 0 15px rgba(255, 51, 102, 0.2); transform: translateY(-3px); }
-.status.support { color: #ff3366; }
+.card.partner { border-color: #FFD700; }
+.card.partner:hover { box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); transform: translateY(-3px); }
+.status.support { color: #FFD700; }
 
 /* 3. DREAM (Фиолетовый/Магия) */
 .dream-section { margin-top: 50px; }
