@@ -65,11 +65,29 @@ h2 { color: #bd00ff; margin: 40px 0 20px; text-transform: uppercase; letter-spac
 .card.blueprint:hover { transform: translateY(-3px); }
 .status.dev { color: #ffae00; }
 
-* НОВЫЙ БЛОК - PARTNERS (Теплый золотой) */
+/* НОВЫЙ БЛОК - PARTNERS (Теплый золотой) */
 .allies-section { margin-top: 20px; }
 .card.partner { border-color: #FFD700; }
 .card.partner:hover { box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); transform: translateY(-3px); }
 .status.support { color: #FFD700; }
+
+/* НАУЧНЫЙ БЛОК - ACADEMIC (Сапфировый/Синий) */
+.science-section { margin-top: 40px; }
+.card.academic { border-color: #4facfe; text-align: left; }
+.card.academic > h3 { text-align: center; }
+.card.academic > p { text-align: center; margin-bottom: 20px; }
+.card.academic:hover { box-shadow: 0 0 20px rgba(79, 172, 254, 0.3); }
+
+/* Элементы списка статей */
+.paper-item { margin-top: 20px; padding-top: 20px; border-top: 1px dashed #333; }
+.paper-item h4 { color: #4facfe; margin-bottom: 8px; font-size: 1.1rem; }
+.paper-item p { font-size: 0.9rem; margin-bottom: 12px; color: #b0c4de; }
+.paper-item.upcoming h4 { color: #666; }
+.paper-item.upcoming p { color: #555; }
+
+/* Уменьшенная кнопка для статей */
+.btn.btn-small { padding: 6px 12px; font-size: 0.8rem; min-height: 32px; border-color: #4facfe; color: #4facfe; }
+.btn.btn-small:hover { background: #4facfe; color: #000; box-shadow: 0 0 10px rgba(79, 172, 254, 0.5); }
 
 /* 3. DREAM (Фиолетовый/Магия) */
 .dream-section { margin-top: 50px; }
